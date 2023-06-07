@@ -1,5 +1,9 @@
 
 ## Cabana - A Real Estate Search Engine
+<img width="1292" alt="image" src="https://github.com/adamwang80/Cabana---A_Real_Estate_Search_Engine/assets/67961987/4d0f09f8-2764-499b-806d-cfdc0e9a8869">
+<img width="1163" alt="image" src="https://github.com/adamwang80/Cabana---A_Real_Estate_Search_Engine/assets/67961987/a05e6ff5-c0aa-4b3a-a7d3-105fa2e7825d">
+<img width="719" alt="image" src="https://github.com/adamwang80/Cabana---A_Real_Estate_Search_Engine/assets/67961987/ec56342c-5766-46b7-b7dc-77db79c17e87">
+![image](https://github.com/adamwang80/Cabana---A_Real_Estate_Search_Engine/assets/67961987/74668d1d-1316-4931-b973-b70b0d168ab3)
 
 
 ## Tech stack used 
