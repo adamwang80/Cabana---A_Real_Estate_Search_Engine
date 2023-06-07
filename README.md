@@ -1,5 +1,5 @@
 
-## Cabana - A Real Estate Search Engine - Project by Group 14 
+## Cabana - A Real Estate Search Engine
 
 
 ## Tech stack used 
