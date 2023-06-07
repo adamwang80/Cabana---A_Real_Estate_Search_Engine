@@ -1,0 +1,184 @@
+:host {
+  /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+      "Segoe UI Symbol"; */
+  font-family: "Garamond", "Calibri", "Helvetica", "Arial", sans-serif;
+  font-size: 14px;
+  color: #333;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Garamond";
+  margin: 8px 0;
+  color: #02498b;
+}
+
+p {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100vh;
+  width: 100vh;
+  margin: 0;
+}
+
+.bg {
+  /* color: #49024d; */
+  background-image: url(../ny_skyline.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  margin: -8px;
+  /* width: 100vh; */
+}
+
+.spacer {
+  flex: 1;
+}
+
+.toolbar {
+  height: 60px;
+  margin: -8px;
+  display: flex;
+  align-items: center;
+  background-color: #02498b;
+  color: rgb(221, 238, 248);
+  font-weight: 600;
+}
+
+.content {
+  display: flex;
+  margin: 32px auto;
+  padding: 0 16px;
+  max-width: 960px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 16px;
+  height: 100%;
+  width: 100%;
+}
+
+.card {
+  display: flex;
+  width: max-content;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background-color: #ffffff;
+  padding-left: 120px;
+  padding-right: 120px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 16px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  flex: 1 1 0px;
+}
+
+.input {
+  /* flex: 1 1 0px; */
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 4px;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.address {
+  /* flex: 1 1 0px; */
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 4px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.button {
+  width: 100%;
+  background-color: #02498b;
+  color: rgb(221, 238, 248);
+  border: none;
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  /* transition: all 0.2s ease-in-out; */
+  margin-top: 8px;
+}
+
+button:hover {
+  background-color: #00aacc;
+  color: #ffffff;
+  /* padding: 5px 10px; */
+}
+
+button:disabled,
+button[disabled] {
+  background-color: #cccccc;
+  color: #666666;
+}
+
+.card-item {
+  width: 100%;
+}
+
+/* background-color: rgba(255,255,255,0.7); */
+
+#loading {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1000;
+  margin: -75px 0 0 -75px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #02498b;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+  display:none;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#loading-page {
+  background: none repeat scroll 0 0 black;
+  position: fixed;
+  display: none;
+  opacity: 0.5;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}

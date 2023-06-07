@@ -1,0 +1,75 @@
+<div class="bg">
+  <div class="toolbar" role="banner">
+    <div class="spacer"></div>
+    <h1 style="font-family: 'Garamond'; color: rgb(221, 238, 248)">CABANA</h1>
+    <div class="spacer"></div>
+  </div>
+  <div class="card" role="main">
+    <div>
+      <h1 class="card-item">Search Radius (miles)</h1>
+      <input
+        class="input"
+        (keyup)="setSearchRadius($event)"
+        type="number"
+        value="1"
+        min="1"
+        max="25"
+        value="10"
+      />
+      <!-- <input (keyup)="setSearchRadius($event)" type="number" value="1" min="1" max="25"> -->
+      <h1 class="card-item">Commute Option</h1>
+      <select class="input" (change)="setCommuteType($event)">
+        <option value="DRIVING">Driving</option>
+        <option value="WALKING">Walking</option>
+        <option value="BICYCLING">Bicycling</option>
+        <option value="TRANSIT">Transit</option>
+      </select>
+
+      <h1 class="card-item">Number of Rooms</h1>
+      <select class="input" (change)="setNumBr($event)">
+        <option value="studio">Studio</option>
+        <option value="1bed">1 bedroom</option>
+        <option value="2bed">2 bedrooms</option>
+        <option value="3bed">3 bedrooms</option>
+        <option value="4bed">4 bedrooms</option>
+        <option value="5bed">5 bedrooms</option>
+      </select>
+
+      <h1 class="card-item">Points of Interest</h1>
+      <div *ngFor="let poi of poiList; index as i">
+        <AutocompleteComponent
+          (setAddress)="getAddress($event, i)"
+          adressType="geocode"
+        ></AutocompleteComponent>
+        <!-- <AutocompleteComponent
+          *ngIf="poiList[i].type === 'establishment'"
+          (setAddress)="getEstablishmentAddress($event, i)"
+          adressType="establishment"
+        ></AutocompleteComponent> -->
+        <br /><br />
+
+        <!-- <button id="i" (click)="removeAddress($event)">x</button> -->
+      </div>
+      <!-- <select class="input" (change)="setAddressType($event)">
+        <option value="geocode">Select</option>
+        <option value="geocode">Address</option>
+        <option value="establishment">Organization</option>
+      </select> -->
+      <div>
+        <button class="button" [disabled]="buttonDisabled" (click)="addPoI()">
+          Add Point of Interest
+        </button>
+      </div>
+    </div>
+    <button
+      class="button"
+      [disabled]="buttonDisabled"
+      (click)="postUserPreferences()"
+    >
+      Look for my home!
+    </button>
+  </div>
+  <div id="loading-page">
+  </div>
+  <span id="loading"></span>
+</div>

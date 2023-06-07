@@ -1,0 +1,43 @@
+  .apartment-details {
+    display: flex;
+  }
+  
+  .left-side {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  
+  .apartment-info {
+    flex: 1;
+  }
+  
+  .slider {
+    overflow-x: scroll;
+    width: 100%;
+    white-space: nowrap;
+    height: 400px; /* Set the slider height equal to the map height */
+  }
+  
+  .slides {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 100%;
+  }
+  
+  .slide {
+    display: inline-block;
+    margin-right: 10px;
+    height: 100%;
+  }
+  
+  .apartment-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+  }
+  
+  #route {
+    height: 400px;
+    width: 50%;
+  }

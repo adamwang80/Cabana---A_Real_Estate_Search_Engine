@@ -1,0 +1,26 @@
+<!-- <p>
+  apartment-details works!
+</p> -->
+
+<div class="apartment-details">
+  <div class="left-side">
+    <div class="apartment-info">
+      <h2 *ngIf="selectedApartment.apartmentName">{{ selectedApartment.apartmentName }}</h2>
+      <p *ngIf="selectedApartment.address && selectedApartment.address.trim() !== ''">Address: {{ selectedApartment.address }}</p>
+      <p *ngIf="selectedApartment.unit">Unit:{{selectedApartment.unit }}</p>
+      <p *ngIf="selectedApartment.price">Monthly rent: {{ selectedApartment.price | currency }}</p>
+      <p *ngIf="selectedApartment.price">Travel Distance: {{ selectedApartment.distance }}</p>
+      <p *ngIf="selectedApartment.price">Commute Time: {{ selectedApartment.duration }}</p>
+      <p>A: {{ selectedApartment.apartmentName }} </p>
+      <p>B: {{apartments.rentalRequest.destination}}</p>
+    </div>
+    <div class="slider">
+      <div class="slides">
+        <div *ngFor="let image of selectedApartment.imageLink.split(',')" class="slide">
+          <img [src]="image" alt="Apartment Image" class="apartment-image">
+        </div>
+      </div>
+    </div>
+  </div>  
+  <div id="route"></div>
+</div>

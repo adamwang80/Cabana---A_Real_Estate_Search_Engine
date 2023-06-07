@@ -1,0 +1,40 @@
+<!-- <p>
+  search-results works!
+</p> -->
+
+<div class="toolbar" role="banner">
+  <button class="homeButton" (click)="home()"><i class="fa fa-home fa-2x" style="color: white;"></i></button>
+  <div class="spacer"></div>
+    <h1 style="font-family: 'Garamond'; color: rgb(221, 238, 248);">Search Results for {{apartments.rentalRequest.bedroomType}} within {{apartments.rentalRequest.searchRadius}} miles</h1>
+  <div class="spacer"></div>
+</div>
+
+<div id="map"></div>
+<div id="apartment-list">
+
+  <div *ngFor="let apartment of apartments.rentalResponse">
+    <div class="card" (click)="updateSelected(apartment)">
+      <img src="{{apartment.imageLink.split(',')[0]}}">
+      
+      <div>
+        <h2> 
+          {{apartment.apartmentName}} 
+        </h2>
+        
+        <p> 
+          {{apartment.price | currency}} 
+        </p>
+        
+        <p class="distance">
+          {{apartment.distance}}  , {{apartment.duration}}
+        </p>
+    </div>
+  </div>
+</div>
+
+<div class="backdrop" *ngIf="showApartmentDetails" (click)="toggleApartmentDetails()"></div>
+  <div class="apartment-details-popup" *ngIf="showApartmentDetails">
+    <button (click)="toggleApartmentDetails()"><i class="fa fa-x"></i></button>
+    <app-apartment-details [selectedApartment]="selectedApartment"></app-apartment-details>
+  </div>
+</div>

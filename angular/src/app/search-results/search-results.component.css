@@ -1,0 +1,188 @@
+body 
+{
+    /* color: #49024d; */
+    background-image: url(../ny_skyline.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    margin: 0px;
+    /* width: 100vh; */
+    overflow: hidden;
+}
+
+.spacer 
+{
+    flex: 1;
+}
+
+.toolbar 
+{
+    height: 60px;
+    margin: -8px;
+    display: flex;
+    align-items: center;
+    background-color: #02498b;
+    color: rgb(221, 238, 248);
+    font-weight: 600;
+}
+
+.homeButton
+{
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    margin-left: 1%;
+    background-color: #02498b;
+    margin-top: 0.5%;
+}
+
+
+.heading 
+{
+    text-align: center;
+}
+
+#map 
+{
+    height: 85%;
+    width: 50%;
+    float: left;
+    position:absolute;
+    margin-left : 3%;
+    margin-top: 2.5%;
+}
+
+#apartment-list
+{
+    height: 85%;
+    width: 40%;
+    float: right;
+    overflow-y: scroll;
+    padding: 0px 20px;
+    margin-top: 3%;
+    scrollbar-width: thin;
+}
+
+#apartment-list::-webkit-scrollbar 
+{
+    width: 6px; 
+    background-color: transparent; 
+}
+  
+  
+#apartment-list::-webkit-scrollbar-thumb 
+{
+    background-color: rgba(0, 0, 0, 0.5); 
+    border-radius: 3px; 
+}
+
+.card 
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.card img 
+{
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.card h2 
+{
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.card p 
+{
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.card .distance 
+{
+    color: green;
+    font-weight: bold;
+}
+
+
+.backdrop 
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.apartment-details-popup 
+{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    max-height: 75%;
+    overflow: hidden;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1001;
+    /* border: 3px solid #1E90FF; */
+}
+
+.apartment-details-popup button 
+{
+    display: block;
+    margin-left: auto;
+    margin-top: none;
+    background-color: white;
+    /* color: white; */
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    /* padding: 6px 12px; */
+    /* font-size: 60px; */
+    cursor: pointer;
+}
+
+/* .apartment-details-popup button:hover 
+{
+    background-color: #187bcd;
+} */
+
+.emptySearch
+{
+    background-image: url(https://cdn-icons-png.flaticon.com/512/6195/6195680.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 80%;
+    width: 80%;
+    display: flex;
+    /* height:100%; */
+    color: #02498b;
+    text-align: center;
+}
+
+.emptySearch h1 {
+    position: absolute; 
+    bottom: 10%; 
+    width: 35%; 
+    padding: 10px; 
+    box-sizing: border-box; 
+    background-color: rgba(0,0,0,0.5); 
+    color: #fff;
+}
